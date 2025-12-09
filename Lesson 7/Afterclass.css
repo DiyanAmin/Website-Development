@@ -1,0 +1,14 @@
+.Pressurize{
+    color: red;
+    font-weight: 400;
+}
+
+#Fade{
+    color: aliceblue;
+    font-weight: lighter;
+}
+
+/*Everything else*/
+*{
+    color: blue;
+}
