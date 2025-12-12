@@ -1,0 +1,36 @@
+.Impact{
+    font-family:'Impact';
+    font-size: large;
+}
+
+#Stress{
+    font-style: italic;
+    font-size: medium;
+}
+
+
+#Flip{
+    transform: rotateX(180deg);
+}
+
+.Transform1{
+    text-decoration: line-through;
+    text-transform: capitalize;
+}
+
+.T2{
+    text-decoration: overline;
+    text-transform: lowercase;
+}
+
+.T3{
+    text-indent: 2.5cm;
+}
+
+.t4{
+    box-shadow: 2px 2px 1px red ;
+}
+
+.The_Text-Shadow{
+    text-shadow: 9px 9px 5px black;
+}
