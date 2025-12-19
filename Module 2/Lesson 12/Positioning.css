@@ -1,0 +1,37 @@
+#Sticky{
+    position: sticky;
+    top: 1px;
+    font-family: Impact;
+    color: rgb(131, 219, 119);
+}
+
+#static{
+    position: static;
+    font-family: Impact;
+    color: black;
+}
+
+#parent_absolute{
+    position: sticky;
+    top: 1px;
+    font-family: Impact;
+    color: blueviolet;
+}
+
+#absolute{
+    position: absolute;
+    font-family: Impact;
+    color: blue;
+}
+
+#relative{
+    position: relative;
+    font-family: Impact;
+    color: darkgreen;
+}
+
+#fixed{
+    position: fixed;
+    font-family: Impact;
+    color: darkorange;
+}
