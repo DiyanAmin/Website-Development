@@ -17,3 +17,8 @@ function Divide(num1,num2){
     quotient=num1/num2;
     document.getElementById('quotient').innerHTML='The quotient is '+quotient;
 }
+
+function formAction(){
+    document.getElementById('formAction').innerHTML='This is a form'
+}
+
