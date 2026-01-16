@@ -1,0 +1,1 @@
+function multiply(a,b){return a*b};function alsoMultiply(a,b){return multiply(a,b)/2};console.log(alsoMultiply(25,4));
