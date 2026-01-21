@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Sign up for Advertisements</title>
+        <!-- Link JavaScript file -->
+        <script src="forms.js" defer></script>
+        <style>
+        h1 {
+        font-family: Calibri;
+        }
+        input {
+        box-shadow: 20px 10px rgb(124, 213, 233);
+        border-color: aqua;
+        padding: 20px;
+        height: 30px;
+        border-radius: 15px;
+        width: 300px;
+        }
+
+        button {
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: aqua;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <!-- Form with onsubmit -->
+
+        <form onsubmit="validate(event)">
+
+            <h1>Sign up</h1>
+            <h4 id="messagebox"></h4>
+            <input type="text" id="email" placeholder="Enter your email here">
+            <br><br>
+            <input type="password" id="password" placeholder="Enter your password here">
+            <br><br>
+            <input type="number" id="age" placeholder="Enter your age here">
+            <br><br> <br> <br>
+            <button type="submit">Sign Up</button>
+
+        </form>
+
+    </body>
+
+</html>
