@@ -27,12 +27,22 @@
 
             <form onsubmit="findPeri()">
                 <h5 style="font-size: 35px;" >Shape</h5>
-                <input type="text" placeholder="Enter shape name..." > <br><br>
-                <button type="submit">Calculate</button>
+                <input type="text" id="shape" placeholder="Enter shape name..." > <br><br>
+                <input type="number" id="side1" placeholder="Press Submit"> <br> <br>
             </form>
         </div>
 
-        <script></script>
+        <script>
+            function findPeri(){
+                const shape = document.getElementById('shape').value;
+                if (shape==undefined){
+                    document.writeln("You are not worthy")
+                }
+                if (shape=='square'){
+                    document.getElementById('side1').placeholder='Enter first side length...'
+                }
+            }
+        </script>
 
 
     </body>
