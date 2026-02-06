@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Form Validation in HTML</title>
+    </head>
+    <body>
+        <h1 id="message" ></h1>
+        <form onsubmit="return validate()" name="form1">
+            Password: <input type="password" name="passDeUserre" id="pass"> <br> <br>
+            <input type="submit" name="submitter" id="sub">
+        </form>
+        <script>
+
+            function tell(text){
+                document.getElementById('message').innerHTML=text;
+            }
+
+            function validate(){
+                var x=document.forms['form1']['fname'].value;
+                if(x==''){
+                    tell('Grade must be filled out');
+                    return false
+                }
+            }
+        </script>
+    </body>
+</html>

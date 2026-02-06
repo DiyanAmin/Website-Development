@@ -1,0 +1,78 @@
+<html>
+    <head>
+
+        <style>
+            #result{
+                width: 700px;
+                height: 30px;
+            }
+            button{
+                font-size: medium;
+                width: 2cm;
+                height: 2cm;
+                background-color: rgb(77, 78, 79);
+            }
+        </style>
+
+        <title>Calculator</title>
+    </head>
+    <body style="background-color: rgb(28, 27, 27);">
+        
+        <div class="Calculator" >
+            <input type="text" id="result" readonly > <br> <br> <br>
+            <div class="buttons">
+                <button onclick="clearScreen()" class="clear" >AC</button>
+                <button onclick="setScreenvalue('/')">/</button>
+                <button onclick="setScreenvalue('*')">*</button> <br>
+                <button onclick="setScreenvalue('-')">-</button>
+
+                <button onclick="setScreenvalue('7')">7</button>
+                <button onclick="setScreenvalue('8')">8</button> <br>
+                <button onclick="setScreenvalue('9')">9</button>
+                <button onclick="setScreenvalue('+')">+</button>
+
+                <button onclick="setScreenvalue('4')">4</button> <br>
+                <button onclick="setScreenvalue('5')">5</button>
+                <button onclick="setScreenvalue('6')">6</button>
+                
+                <button onclick="calcResult()" class="equal" >=</button> <br>
+
+                <button onclick="setScreenvalue('1')">1</button>
+                <button onclick="setScreenvalue('2')">2</button>
+                <button onclick="setScreenvalue('3')">3</button> <br>
+                <button onclick="setScreenvalue('.')">.</button>
+
+                <button onclick="setScreenvalue('0')" class="zero" >0</button>
+            </div>
+
+        </div>
+
+        <script>
+            function clearScreen(){
+                document.getElementById('result').value='';
+            }
+
+            function setScreenvalue(value){
+                document.getElementById('result').value += value;
+            }
+
+            function calcResult(){
+                const resultElement = document.getElementById('result');
+                const expression = resultElement.value.trim();
+
+                //Checking for empty input
+                if(expression===''){
+                    resultElement.value = 'Enter an expression';
+                    return;
+                }
+
+                //Evaluation
+                try{
+                    resultElement.value = eval(expression);
+                }catch(e){
+                    resultElement.value = 'Invalid Expression'
+                }
+            }
+        </script>
+    </body>
+</html>

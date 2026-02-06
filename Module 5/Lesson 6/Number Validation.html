@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Number validation</title>
+    </head>
+    <body>
+        <h1 style="font-family: 'Calibri';">Enter a number and click <kbd>Verify</kbd></h1> <br>
+
+        <input type="number" name="num" id="numinp" style="border-radius: 10px;"  min="1" max="100"  > <br> <br>
+        <button onclick="validate()" >Verify</button> <br> <br>
+
+        <p id="result"></p>
+        <script>
+            function validate(){
+                var inputObject = document.getElementById('numinp');
+                var errorObj = document.getElementById('result');
+                if(!inputObject.checkValidity()){
+                    errorObj.innerHTML = inputObject.validationMessage;
+                }else{
+                    errorObj.innerHTML = 'Input is valid'
+                }
+            }
+        </script>
+    </body>
+</html>
