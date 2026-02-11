@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: black;.
+            }
+            #snow{
+                height: 20px;
+                width: 20px;
+                background-color: aliceblue;
+                color: aliceblue;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="makeSnowFall()">....</button> <br> <br> <br>
+        <div id="snow" >.</div>
+
+        <script>
+            const snow = document.getElementById('snow');
+            function makeSnowFall(){
+                var pixels = 1;
+                var height = `${pixels}cm`;
+                snow.style.paddingTop = height;
+                pixels+=1;
+                snow.style.height,snow.style.width = '20px';
+            }
+        </script>
+    </body>
+</html>

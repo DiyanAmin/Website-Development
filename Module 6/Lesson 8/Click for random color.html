@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <style>
+            button{
+                border-radius: 13px;
+            }
+        </style>
+    </head>
+    <body id="background">
+        <button onclick="genRandomColor()" >Change Color</button>
+    </body>
+    <script>
+        const background= document.getElementById("background");
+
+        function genRandomColor(){
+
+            let red= Math.floor(Math.random()*254)+1;
+            let green= Math.floor(Math.random()*254)+1;
+            let blue= Math.floor(Math.random()*254)+1;
+            background.style.backgroundColor = `rgb(${red},${green},${blue})`;
+        }
+    </script>
+</html>
