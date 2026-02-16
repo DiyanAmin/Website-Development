@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Shopping List</title>
+        <style>
+            *{
+                font-family: 'Calibri';
+                padding-left: 5px;
+            }
+            input,select,option,button{
+                font-family:Serif;
+                border-width: 3px;
+                border-radius: 10px;
+                height: 30px;
+                border-color: paleturquoise;
+                color:rgb(29, 124, 32);
+                background-color: chartreuse;
+            }
+            #itemNum{
+                width: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Shopping List</h1>
+        <br>
+        <h3>Item Name , Amount and unit</h3>
+        <input type="text" id="item" placeholder="Enter item name here" > <input type="number" id="itemNum"><select id="unit">
+            <option value="kg">kg</option>
+            <option value="lb">lb</option>
+            <option value="g">g</option>
+            <option value="cm">cm</option>
+            <option value="m">m</option>
+            <option value="s">Small</option>
+            <option value="l">Large</option>
+            <option value="xl">XL</option>
+            <option value="xxl">XXL</option>
+            <option value="xxxl">XXXL</option>
+            <option value="N/A">N/A</option>
+        </select> <br> <br>
+        <button onclick="addItem()">Add Item</button>
+
+        <br> <br>
+        <ol>
+            <h3>Shopping List</h3>
+            <br>
+
+        </ol>
+
+        <script>
+            function addItem(){
+                document.write(document.getElementById('unit').value);
+            }
+        </script>
+    </body>
+</html>
