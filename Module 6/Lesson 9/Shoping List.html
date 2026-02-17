@@ -24,7 +24,7 @@
         <h1>Shopping List</h1>
         <br>
         <h3>Item Name , Amount and unit</h3>
-        <input type="text" id="item" placeholder="Enter item name here" > <input type="number" id="itemNum"><select id="unit">
+        <input type="text" id="item" placeholder="Enter item name here" ><p id="itemNameWarn"></p> <input type="number" id="itemNum"><select id="unit">
             <option value="kg">kg</option>
             <option value="lb">lb</option>
             <option value="g">g</option>
@@ -52,12 +52,24 @@
                 var amount = document.getElementById("itemNum").value;
                 var unit = document.getElementById('unit').value;
                 let itemList = document.getElementById("items");
+                let validity = false;
 
                 if(unit==='N/A'){
                     unit='';
+                    validity=true;
+                }else{
+                    validity=true;
                 }
 
-                itemList.innerHTML=itemList.innerHTML+`<li><b>${amount}${unit}</b> ${itemName}`;
+                if(itemName===''){
+                    document.getElementById('itemNameWarn').innerText = 'Please Enter valid Name';
+                    validity=false;
+                }else{
+                    validity=true;
+                }
+                if(amount===''){amount='1';validity=true;}
+
+                if(validity){itemList.innerHTML=itemList.innerHTML+`<li><b>${amount}${unit}</b> ${itemName}`;}
             }
         </script>
     </body>
