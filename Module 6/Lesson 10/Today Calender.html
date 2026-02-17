@@ -1,0 +1,56 @@
+<html>
+    <body onload="displayCalender()" id="b" >
+        <script>
+            function displayCalender(){
+                var date = new Date();
+                var day = date.getDay();
+                var month = date.getMonth()+1;
+                var year = date.getFullYear();
+                var displayWorthyDate = day+'/'+month+'/'+year;
+
+                if(month===1){
+                    month = 'January';
+                }
+                if(month===2){
+                    month = 'February';
+                }
+                if(month===1){
+                    month = 'March';
+                }
+                if(month===1){
+                    month = 'April';
+                }
+                if(month===1){
+                    month = 'May';
+                }
+                if(month===1){
+                    month = 'June';
+                }
+                if(month===1){
+                    month = 'July';
+                }
+                if(month===1){
+                    month = 'August';
+                }
+                if(month===1){
+                    month = 'September';
+                }
+                if(month===1){
+                    month = 'October';
+                }
+                if(month===1){
+                    month = 'November';
+                }
+                if(month===1){
+                    month = 'December';
+                }
+                
+                
+                document.getElementById('b').innerHTML = displayWorthyDate+'<br>'+day+' '+month+' '+year+'<br><br><button onclick="seeCalender()" >See Calender</button>';
+            }
+            function seeCalender(){
+                
+            }
+        </script>
+    </body>
+</html>
