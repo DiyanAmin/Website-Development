@@ -30,17 +30,17 @@
             <option value="g">g</option>
             <option value="cm">cm</option>
             <option value="m">m</option>
-            <option value="s">Small</option>
-            <option value="l">Large</option>
-            <option value="xl">XL</option>
-            <option value="xxl">XXL</option>
-            <option value="xxxl">XXXL</option>
+            <option value="S">Small</option>
+            <option value="L">Large</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+            <option value="XXXL">XXXL</option>
             <option value="N/A">N/A</option>
         </select> <br> <br>
         <button onclick="addItem()">Add Item</button>
 
         <br> <br>
-        <ol>
+        <ol id="items" >
             <h3>Shopping List</h3>
             <br>
 
@@ -48,7 +48,16 @@
 
         <script>
             function addItem(){
-                document.write(document.getElementById('unit').value);
+                var itemName = document.getElementById('item').value;
+                var amount = document.getElementById("itemNum").value;
+                var unit = document.getElementById('unit').value;
+                let itemList = document.getElementById("items");
+
+                if(unit==='N/A'){
+                    unit='';
+                }
+
+                itemList.innerHTML=itemList.innerHTML+`<li><b>${amount}${unit}</b> ${itemName}`;
             }
         </script>
     </body>
