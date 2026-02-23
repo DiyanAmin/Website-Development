@@ -1,0 +1,49 @@
+
+<html>
+    <head>
+    <title>Roll Dice</title>
+    <style>
+    #dice {
+    font-size: 320px;
+    }
+    #dice:hover {
+    cursor: pointer;
+    }
+    </style>
+    </head>
+    <body>
+        <div id="dice" onclick="roll()"></div>
+        <br>
+        <button id="stop">Stop</button>
+        <script>
+            var dice = document.getElementById("dice");
+            var stopButton = document.getElementById("stop");
+            var dices = ['&#9856;', '&#9857;', '&#9858;', '&#9859;', '&#9860;', '&#9861;'];
+            var stopped = false;
+            var t; // interval variable
+
+            function gamble() {
+                var diceIndex = Math.floor(Math.random() * 6);
+                dice.innerHTML = dices[diceIndex];
+            }
+
+            function roll() {
+                if (!stopped) {
+                    t = setInterval(gamble, 100);
+                    stopped = true;
+                } else {
+                    clearInterval(t);
+                    stopped = false;
+                }
+            }
+            stopButton.onclick = function () {
+            clearInterval(t);
+            stopped = false;
+            };
+
+            window.onload = function () {
+                gamble(); // show one dice at start
+            };
+        </script>
+    </body>
+</html>
