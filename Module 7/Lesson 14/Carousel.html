@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Carousel</title>
+        <style>
+        .slide,.holder {
+        box-shadow: 0px 0px 25px black;
+        background-color: turquoise;
+        padding: 25%;
+        padding-top: 40px;
+        width: 25%;
+        height: 250px;
+        object-fit: cover;
+        }
+        .slide:hover{
+            box-shadow: 0px 0px 25px red ;
+            transform: translateY(-3px);
+        }
+
+        </style>
+        <script>
+            var myIndex = 0;
+            window.onload = function() {
+            carousel();
+            };
+
+            function carousel() {
+            var i;
+            var x = document.getElementsByClassName("slide");
+            for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+            myIndex = 1;
+            }
+            x[myIndex - 1].style.display = "block";
+
+            setTimeout(carousel, 3000); // Change image every 3 seconds
+            }
+
+        </script>
+    </head>
+    <body>
+    <section id="holder"  >
+    <img src="Carousel Images/Website1.webp" alt="1" class="slide">
+    <img src="Carousel Images/Website2.webp" alt="2" class="slide">
+    <img src="Carousel Images/Website3.webp" alt="3" class="slide">
+    <img src="Carousel Images/Website4.webp" alt="4" class="slide">
+    <img src="Carousel Images/Website5.webp" alt="5" class="slide">
+    </section>
+    </body>
+</html>
